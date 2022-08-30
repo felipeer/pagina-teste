@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+/* #ee738d  cor das letras principais  */
+
+
+/* #ee738d  cor do hover das letras  principais  */
+
+body {
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    background-image: url(../img/teste2.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    /*-- tentar: background-repeat: no-repeat;*/
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-color: violet;
+}
+
+body.hidden-scrolling {
+    overflow-y: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container-01 {
+    max-width: 1170px;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ///////////                  CABEÇALHO                ///////////  */
+
+.header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    /* sempre menor 99*/
+    padding: 15px 0px;
+    /*espaçamento externo do cabeçalho geral */
+}
+
+.header-main {
+    background-color: rgba(0, 0, 0, 0.678);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    /* espaçamento interno do cabeçalho */
+    border-radius: 6px;
+}
+
+.header .logo {
+    padding: 0 15px;
+    /* espaçamento interno  entre o logo e cabeçalho */
+}
+
+.header .logo a {
+    font-size: 9px;
+    /* tamanho da fonte do logo (letreiro) */
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #ee738d;
+    /* cor das letras principal */
+}
+
+.header .nav-menu {
+    padding: 0 15px;
+}
+
+.header .menu>.menu-item {
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+}
+
+.header .menu>.menu-item>a {
+    display: block;
+    padding: 12px 0;
+    font-size: 18px;
+    /* tamanho da fonte do cabeãlho */
+    color: #ee738d;
+    /* cor do cabeãlho */
+    text-transform: capitalize;
+    /* tipo de formato das letras ( A ou a)*/
+    font-weight: 700;
+    transition: all 0.8s ease;
+}
+
+.header .menu>.menu-item>a .plus {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    position: relative;
+    margin-left: 5px;
+    pointer-events: none;
+}
+
+.header .menu>.menu-item>a .plus:before,
+.header .menu>.menu-item>a .plus:after {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    background-color: #ee738d;
+    height: 2px;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    transition: all 0.8s ease;
+}
+
+.header .menu>.menu-item:hover>a .plus:before,
+.header .menu>.menu-item:hover>a .plus:after {
+    background-color: #f1d7d7;
+}
+
+.header .menu>.menu-item>a .plus:after {
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.header .menu>.menu-item>.sub-menu>.menu-item>a:hover,
+.header .menu>.menu-item:hover>a {
+    color: #FFD7E0;
+}
+
+.header .menu>.menu-item>.sub-menu {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.678);
+    width: 220px;
+    position: absolute;
+    left: 0;
+    top: 130%;
+    background-color: rgba(0, 0, 0, 0.678);
+    padding: 10px 0;
+    border-top: 3px solid #ee738d;
+    transform: translateY(10px);
+    transition: all 0.8s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media(min-width: 992px) {
+    .header .menu>.menu-item-has-children:hover>.sub-menu {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    .header .menu>.menu-item-has-children:hover>a .plus:after {
+        transform: translate(-50%, -50%) rotate(180deg);
+        /* tirar se der problema - animação nav menu*/
+    }
+}
+
+.header .menu>.menu-item>.sub-menu>.menu-item {
+    display: block;
+}
+
+.header .menu>.menu-item>.sub-menu>.menu-item>a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ee738d;
+    transition: all 0.8s ease;
+    text-transform: none;
+    /* tipo de formato das letras ( A ou a) PADRAO CAPTALIZE/*/
+}
+
+.header .open-nav-menu {
+    height: 34px;
+    width: 40px;
+    margin-right: 15px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header .open-nav-menu span {
+    display: block;
+    height: 3px;
+    width: 24px;
+    background-color: #ee738d;
+    position: relative;
+}
+
+.header .open-nav-menu span:before,
+.header .open-nav-menu span:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ee738d;
+    box-sizing: border-box;
+}
+
+.header .open-nav-menu span:before {
+    top: -7px;
+    /* animação do sub-menu */
+}
+
+.header .open-nav-menu span:after {
+    top: 7px;
+    /* animação do sub-menu */
+}
+
+.header .close-nav-menu {
+    height: 30px;
+    /*altura do icone close para trocar*/
+    width: 30px;
+    /*largura do icone close para trocar*/
+    margin: 0 0 50px 15px;
+    /* margin do icone close */
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .close-nav-menu img {
+    width: 50px;
+    /*tamanho logo img */
+}
+
+.header .menu-overlay {
+    position: fixed;
+    z-index: 20;
+    /* sempre maior 999*/
+    background-color: rgba(0, 0, 0, 0.7);
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*home section*/
+
+article {
+    margin: 280px 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /*    display: block;
+*/
+}
+
+.row {
+    display: flex;
+    margin: 240px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(179, 4, 4, 0.22);
+    transition: all 0.3s ease-out;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+    background-color: rgba(67, 33, 33, 0.6);
+    /*background-color: aqua;*/
+    margin: 0;
+    padding: 30px 0px;
+}
+
+.card-menu {
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 0px rgba(227, 9, 9, 0.22);
+    padding: 20px 0;
+    margin: 0;
+    width: 100%;
+    /*background-color: violet;*/
+    background-color: rgba(67, 33, 33, 0.6);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+.card h2 {
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    /*background-color: blue;*/
+    font-size: 25;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px 20px;
+}
+
+.card p {
+    color: #fff;
+    /*    color: #a71534;
+*/
+    /*background-color: yellow;*/
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+.logo-card {
+    display: flex;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+
+/*/////////////////////////////////////////////////////*/
