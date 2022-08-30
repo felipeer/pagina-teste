@@ -9,11 +9,10 @@ body {
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
-   background-image: url('teste1.jpg');
-    background-position: center top;
-    background-repeat: no-repeat;
     /*-- tentar: background-repeat: no-repeat;*/
+    background-size: cover;
     height: 100vh;
+    background-repeat: no-repeat;
     width: 100%;
 }
 
@@ -307,15 +306,23 @@ article {
 }
 
 .home .caption {
-    width: 60%;
-    padding-left: 40px;
+    margin: 0;
+    background-color: rgba(243, 133, 133, 0.2);
+    /*border: 2px solid rgb(255, 125, 125);*/
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 0;
 }
 
 .home .caption h1 {
-    font-size: 30px;
-    width: 100vw;
+    text-align: center;
     color: #000000;
     margin: 0;
+}
+
+.home h1 {
+    font-size: 5.50vw;
+    font-weight: 700;
 }
 
 .home .slide.active .caption h1 {
@@ -325,8 +332,7 @@ article {
 }
 
 .home .caption p {
-    width: 100vw;
-    font-size: 2vw;
+    text-align: center;
     color: #222222;
     margin: 0;
 }
@@ -337,21 +343,30 @@ article {
     animation-delay: 1.2s;
 }
 
+.home p {
+    font-size: 3.50vw;
+    font-weight: 700;
+}
+
 .home .caption a {
-    font-size: 10px;
     border-radius: 8px;
+    border: 2px solid rgb(255, 125, 125);
     display: inline-block;
-    padding: 10px 10px;
     background-color: rgba(179, 19, 19, 0.5);
     text-decoration: none;
-    color: #ffffff;
+    color: black;
 }
 
 .home .slide.active .caption a {
+    text-align: center;
     opacity: 0;
     animation: captionText .5s ease forwards;
     animation-delay: 1.4s;
-    padding: 6px 15px;
+    padding: 5px 15px;
+}
+
+.home a {
+    font-size: 1.30vw;
 }
 
 @keyframes captionText {
@@ -374,8 +389,8 @@ article {
     height: 40px;
     width: 40px;
     margin-top: -20px;
-    color: #ffffff;
-    background-color: #ee738d;
+    color: #222222;
+    background-color: rgba(255, 125, 125, 0.505);
     text-align: center;
     line-height: 40px;
     font-size: 20px;
@@ -386,6 +401,7 @@ article {
 .home .controls .prev:hover,
 .home .controls .next:hover {
     background-color: #000000;
+    color: #ffa2a2b9;
 }
 
 .home .controls .prev {
@@ -405,20 +421,25 @@ article {
     cursor: pointer;
 }
 
-.home .indicator div {
+.indicator div {
     display: inline-block;
     width: 25px;
     height: 25px;
-    color: #ffffff;
-    background-color: #ee738d;
+    color: #ffa2a2;
+    background-color: rgba(243, 133, 133, 0.5);
     border-radius: 50%;
     text-align: center;
-    line-height: 25px;
+    line-height: 22.5px;
     margin: 0 3px;
 }
 
+.home .indicator div:hover {
+    color: #fff;
+    background-color: rgba(214, 199, 199, 0.5);
+}
+
 .home .indicator div.active {
-    background-color: #000;
+    background-color: black;
 }
 
 
@@ -427,25 +448,6 @@ article {
 @media(max-width: 767px) {
     .controls {
         display: none;
-    }
-    .home .caption {
-        padding-left: 10px;
-    }
-    .home .caption p {
-        font-size: 5vw;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .home .caption h1 {
-        font-size: 9.25vw;
-    }
-    .home .caption p {
-        font-size: 4.75vw;
-    }
-    .home .caption a {
-        font-size: 3vw;
-        padding: 10px 10px;
     }
 }
 
