@@ -345,7 +345,7 @@ article {
 
 .home p {
     font-size: 3.50vw;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .home .caption a {
@@ -367,6 +367,8 @@ article {
 
 .home a {
     font-size: 2.50vw;
+    font-weight: 700;
+
 }
 
 @keyframes captionText {
