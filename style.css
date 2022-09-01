@@ -57,13 +57,14 @@ a {
 }
 
 .header-main {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 10px 0;
     /* espaçamento interno do cabeçalho */
     border-radius: 10px;
+    border: 2px solid #c44863;
 }
 
 .header .logo {
