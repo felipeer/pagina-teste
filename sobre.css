@@ -29,7 +29,7 @@ p {
 body {
     height: 100vh;
     width: 100%;
-    background: url(../img/fundo-body.jpg);
+    background: url(fundo-body.jpg);
     background-position: center;
     background-repeat: no-repeat;
     /*-- tentar: background-repeat: no-repeat;*/
