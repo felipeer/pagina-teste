@@ -319,7 +319,7 @@ article {
 
 .home .caption h1 {
     text-align: center;
-    color: #e44568;
+    color: rgb(197, 197, 197);
     margin: 0;
 }
 
@@ -337,7 +337,7 @@ article {
 
 .home .caption p {
     text-align: center;
-    color: #e44568;
+    color: rgb(197, 197, 197);
     margin: 0;
 }
 
@@ -358,7 +358,7 @@ article {
     border: 2px solid rgba(220, 89, 89, 0.405);
     display: inline-block;
     text-decoration: none;
-    color: #ee738d;
+    color: rgb(197, 197, 197);
 }
 
 .home .slide.active .caption a {
