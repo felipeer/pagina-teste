@@ -280,7 +280,8 @@ article {
     z-index: 1;
     display: none;
     padding: 0 15px;
-    animation: slide 2s ease;
+    /*animation: slide 3s ease-in-out;*/
+    animation: slide 3s cubic-bezier(0.73, 0.06, 0, 0.94);
 }
 
 .home .slide.active {
@@ -289,7 +290,7 @@ article {
 
 @keyframes slide {
     0% {
-        transform: scale(1.1);
+        transform: scale(1.5);
     }
     100% {
         transform: scale(1);
@@ -307,20 +308,23 @@ article {
 
 .home .caption {
     margin: 0;
+    width: auto;
     /*border: 2px solid rgb(255, 125, 125);*/
     border-radius: 10px;
     text-align: center;
     padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .home .caption h1 {
     text-align: center;
-    color: #000000;
+    color: #ee738d;
     margin: 0;
 }
 
 .home h1 {
-    font-size: 5.50vw;
+    font-size: 45px;
+    text-transform: uppercase;
     font-weight: 700;
 }
 
@@ -332,7 +336,7 @@ article {
 
 .home .caption p {
     text-align: center;
-    color: #222222;
+    color: #ee738d;
     margin: 0;
 }
 
@@ -343,17 +347,17 @@ article {
 }
 
 .home p {
-    font-size: 3.50vw;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 10px 0px;
 }
 
 .home .caption a {
     border-radius: 5px;
     border: 2px solid rgba(220, 89, 89, 0.405);
     display: inline-block;
-    background-color: rgba(179, 19, 19, 0.0);
     text-decoration: none;
-    color: black;
+    color: #ee738d;
 }
 
 .home .slide.active .caption a {
@@ -365,7 +369,7 @@ article {
 }
 
 .home a {
-    font-size: 2.50vw;
+    font-size: 12px;
 }
 
 @keyframes captionText {
@@ -445,7 +449,7 @@ article {
 
 /*responsive*/
 
-@media(max-width: 767px) {
+@media screen and (max-width: 767px) {
     .controls {
         display: none;
     }
@@ -454,5 +458,47 @@ article {
 @media screen and (max-width: 1175px) {
     .header-main {
         border-radius: 0px;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .home h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .home p {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .home a {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .home h1 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .home p {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .home a {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 699px) {
+    .home h1 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .home p {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .home a {
+        font-size: 11px;
     }
 }
