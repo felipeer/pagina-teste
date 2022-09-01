@@ -314,13 +314,11 @@ article {
     border-radius: 10px;
     text-align: center;
     padding: 20px 0;
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .home .caption h1 {
     text-align: center;
-    color: rgb(197, 197, 197);
+    color: rgb(228, 228, 228);
     margin: 0;
 }
 
@@ -338,7 +336,7 @@ article {
 
 .home .caption p {
     text-align: center;
-    color: rgb(197, 197, 197);
+    color: rgb(228, 228, 228);
     margin: 0;
 }
 
@@ -356,10 +354,11 @@ article {
 
 .home .caption a {
     border-radius: 5px;
-    border: 2px solid rgba(220, 89, 89, 0.405);
+    border: 2px solid rgb(228, 228, 228);
+    ;
     display: inline-block;
     text-decoration: none;
-    color: rgb(197, 197, 197);
+    color: rgb(228, 228, 228);
 }
 
 .home .slide.active .caption a {
