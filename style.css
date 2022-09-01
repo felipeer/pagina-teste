@@ -12,8 +12,9 @@ body {
     /*-- tentar: background-repeat: no-repeat;*/
     background-size: cover;
     height: 100vh;
-    background-repeat: no-repeat;
     width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 body.hidden-scrolling {
@@ -280,8 +281,8 @@ article {
     z-index: 1;
     display: none;
     padding: 0 15px;
-    /*animation: slide 3s ease-in-out;*/
-    animation: slide 3s cubic-bezier(0.73, 0.06, 0, 0.94);
+    animation: slide 3s ease-in-out;
+    /*animation: slide 3s cubic-bezier(0.73, 0.06, 0, 0.94);*/
 }
 
 .home .slide.active {
@@ -313,12 +314,12 @@ article {
     border-radius: 10px;
     text-align: center;
     padding: 20px 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .home .caption h1 {
     text-align: center;
-    color: #ee738d;
+    color: #e44568;
     margin: 0;
 }
 
@@ -336,7 +337,7 @@ article {
 
 .home .caption p {
     text-align: center;
-    color: #ee738d;
+    color: #e44568;
     margin: 0;
 }
 
@@ -348,7 +349,7 @@ article {
 
 .home p {
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 700;
     padding: 10px 0px;
 }
 
