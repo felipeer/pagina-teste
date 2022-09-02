@@ -282,7 +282,7 @@ article {
     z-index: 1;
     display: none;
     padding: 0 15px;
-    animation: slide 3s ease-in-out;
+    animation: slide 3s ease;
     /*animation: slide 3s cubic-bezier(0.73, 0.06, 0, 0.94);*/
 }
 
@@ -356,7 +356,6 @@ article {
 .home .caption a {
     border-radius: 5px;
     border: 2px solid rgb(228, 228, 228);
-    ;
     display: inline-block;
     text-decoration: none;
     color: rgb(228, 228, 228);
