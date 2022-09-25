@@ -355,10 +355,11 @@ article {
 
 .home .caption a {
     border-radius: 5px;
-    border: 2px solid #ca3b5a;    
+    backdrop-filter: blur(10px);
+    border: 3px double #ca3b5a;        
     display: inline-block;
     text-decoration: none;
-    color: #ca3b5a;
+    color: #000;
 }
 
 .home .slide.active .caption a {
