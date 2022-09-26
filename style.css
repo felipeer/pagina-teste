@@ -356,7 +356,7 @@ article {
 .home .caption a {
     border-radius: 5px;
     backdrop-filter: blur(10px);
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 1px 1px 1px #fff;
     border: 3px double #ca3b5a;
     display: inline-block;
     text-decoration: none;
