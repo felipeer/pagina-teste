@@ -97,6 +97,7 @@ a {
     font-size: 18px;
     /* tamanho da fonte do cabeãlho */
     color: #ca3b5a;
+    text-shadow: 1px 1px 1px #000;
     /* cor do cabeãlho */
     text-transform: capitalize;
     /* tipo de formato das letras ( A ou a)*/
@@ -320,6 +321,7 @@ article {
 .home .caption h1 {
     text-align: center;
     color: #ca3b5a;
+    text-shadow: 1px 1px 1px #000;
     margin: 0;
 }
 
@@ -338,6 +340,7 @@ article {
 .home .caption p {
     text-align: center;
     color: #ca3b5a;
+    text-shadow: 1px 1px 1px #000;
     margin: 0;
 }
 
@@ -356,11 +359,9 @@ article {
 .home .caption a {
     border-radius: 5px;
     backdrop-filter: blur(10px);
-    text-shadow: 1px 1px 1px #fff;
     border: 3px double #ca3b5a;
     display: inline-block;
     text-decoration: none;
-    color: #c44863;
 }
 
 .home .slide.active .caption a {
@@ -373,6 +374,8 @@ article {
 
 .home a {
     font-size: 12px;
+    color: #ca3b5a;
+    text-shadow: 1px 1px 1px #000;
 }
 
 @keyframes captionText {
@@ -395,7 +398,7 @@ article {
     height: 40px;
     width: 40px;
     margin-top: -20px;
-    color: #222222;
+    color: #2222228e;
     background-color: #b34848;
     text-align: center;
     line-height: 40px;
@@ -432,8 +435,10 @@ article {
     display: inline-block;
     width: 25px;
     height: 25px;
-    color: #000;
-    background-color: rgba(243, 133, 133, 0.5);
+    color: #ca3b5a;
+    text-shadow: 1px 1px 1px #000;
+    border: 1px solid #ca3b5a;
+    background-color: rgba(209, 124, 124, 0.315);
     border-radius: 50%;
     text-align: center;
     line-height: 22.5px;
@@ -446,7 +451,8 @@ article {
 }
 
 .home .indicator div.active {
-    background-color: rgb(241, 199, 199);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 
