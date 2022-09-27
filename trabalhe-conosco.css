@@ -234,11 +234,12 @@ button {
 
 a[href='https://docs.google.com/forms/d/e/1FAIpQLScPGgYe2rEe1kLFqmqlryUUbgkFFp6Wx4D36RfFgo1v3pLBJA/viewform'] {
     color: black;
+    text-shadow: 1px 1px 1px #665659;
     text-decoration: none;
     letter-spacing: 1.5px;
 }
 
-span {
+.btn-5 {
     display: block;
     padding: 20px 20px;
 }
